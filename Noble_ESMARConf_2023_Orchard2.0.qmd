@@ -167,4 +167,8 @@ We often have moderators that are continuous in meta-analyis, particularly when 
 
 # Orchard plots with marginalised means
 
+One of the main limitations of `orchaRd` (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the `emmeans` package circumvents that limitation because a full model can be fit and mean effect size predcited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). 
+
 # Orchard plots from models with heterogeneous variance
+
+# References

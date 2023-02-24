@@ -113,7 +113,7 @@ orchaRd::orchard_plot(lim_MR, mod = "Phylum", group = "Article", data = lim, xla
 
 ## Subsetting levels in orchard plots
 
-@fig-orchard1 looks pretty bad. There's very little data in most phyla. So, lets change this by restricting the plotting to only taxa with sufficient data. We can do this using the `at` argument to limit the prediction to only three phylo. 
+@fig-orchard1 looks pretty bad. There's very little data in most phyla. So, lets change this by restricting the plotting to only taxa with sufficient data. We can do this using the `at` argument along with `subset = TRUE` to limit the prediction to only three phyla. 
 
 Here we'll demonstrate a two step approach which can also provide a table of the meta-analytic means which can be used in publications
 
@@ -164,3 +164,7 @@ We often have moderators that are continuous in meta-analyis, particularly when 
     orchaRd::bubble_plot(model_lim2, mod = "year", group = "Article", data = na.omit(lim), by = "Environment", xlab = "Year",legend.pos = "top.left")
 
 ```
+
+# Orchard plots with marginalised means
+
+# Orchard plots from models with heterogeneous variance

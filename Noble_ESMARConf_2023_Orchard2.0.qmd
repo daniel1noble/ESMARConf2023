@@ -1,0 +1,165 @@
+---
+title: "**orchaRd 2.0** Tutorial: ESMARConf2023"
+author: Daniel Noble
+date: "`r Sys.Date()`"
+bibliography: [./bib/ref.bib]
+biblio-style: ./bib/methods-in-ecology-and-evolution.csl
+format: 
+ html:
+    theme: simplex
+    code-fold: show
+    code-overflow: wrap
+    toc: true
+    toc-title: "**Table of Contents**"
+    code-tools: true
+    toc-location: left
+    number-sections: true
+crossref: 
+    fig-title: Figure
+width: 10
+execute:
+    warning: false
+---
+
+# How to Download and Install Orchard (vers. 2.0)
+
+Orchard 2.0 is not yet on **CRAN**. You can download the package by visiting our [GitHub](https://github.com/daniel1noble/orchaRd) page. 
+
+::: {.callout-note}
+If you don't already have the `pacman` package **remember to unannotate code line 3**
+:::
+
+```{r}
+#| label: packages
+#| warning: false
+#| output: false
+#| code-line-numbers: true
+#| code-overflow: scroll
+
+rm(list = ls())
+devtools::install_github("daniel1noble/orchaRd")
+# install.packages("pacman")
+pacman::p_load(devtools, tidyverse, metafor, patchwork, 
+        R.rsp, orchaRd, emmeans, ape, phytools, gt, flextable)
+options(digits = 3, scipen = 2)
+```
+
+:::{.column-margin}
+Techncially we don't need all these packages to download `orchaRd`, but we'll use them throughout the examples. `orchaRd` does rely heavly on the `emmeans` and `tidyverse` packages. You will need to ensure that you have R updated to the required version for `emmeans` to work as it has version requirements.
+:::
+
+We also have a [detailed vignette](https://daniel1noble.github.io/orchaRd/) which will show much of it's functionality.
+
+# Orchard and Bubble Plots
+
+## Lets load a dataset
+We'll use a very simple meta-analysis dataset that is attached to `orchaRd` to demonstrate how you can make orchard plots and bubble plots from meta-regression models. The data come from @Lim2014. This is a meta-analysis comparing correlation coefficients (rather Fisher's *Z* Transformed Correlation), and is useful as it demonstrates a number of orchard plot functions
+
+```{r}
+#| label: lim
+#| code-overflow: scroll
+#| code-line-numbers: true
+
+# Load the lim dataset
+data(lim)
+
+# Add in the sampling variance
+lim$vi <- (1/sqrt(lim$N - 3))^2
+
+# Lets fit a meta-regression 
+lim_MR <- metafor::rma.mv(yi = yi, V = vi, 
+                    mods = ~Phylum - 1, 
+                    random = list(~1 | Article, 
+                                 ~1 | Datapoint), 
+                    data = lim)
+summary(lim_MR)
+```
+
+Here, we have fit a multi-level meta-regression model, with two random effects (Article / Study) and a within study variance. You will notice that we have a Phylum moderator as we are intersted in estimating the meta-analytic mean within each major phyla (@fig-orchard1). 
+
+## Orchard Plots
+
+Using this model and data lets demonstrate how to make orchard plots. This can be done with the `orchard_plot` function.
+
+:::{.column-margin} 
+If you're not sure what arguments `orchard_plot` takes you can explore the vigette or ask for help using `?orchard_plot`
+:::
+
+:::{.column-margin} 
+`orchard_plot` takes a few essential arguments:
+
+```{r}
+#| label: tbl-args
+#| tbl-cap: Key arguments
+#| echo: false
+
+argument <- c("model", "mod", "data", "group", "xlab")
+descrp <- c("The metafor model object (e.g., rma.mv)", "The moderator of interest (as a character). If you don't specify it will default to the overall meta-analytic mean", "The dataset used to fit the model", "The group you wish to tally N for within brackets", "The axis label for the effect size")
+
+tab_arg  <- data.frame(`Argument` = argument,
+                    `Description` = descrp)
+gt(tab_arg)
+```
+:::
+
+```{r}
+#| label: fig-orchard1
+#| fig-cap: Orchard plot of the @Lim2014 meta-regression model. Plotted are meta-anlaytic means, 95% confidence intervals, 95% prediction intervals and the raw effect size data weighted by the the sample size. In this case, *k* is the number of effect sizes and the number of studies are provided within brackets.
+
+orchaRd::orchard_plot(lim_MR, mod = "Phylum", group = "Article", data = lim, xlab = "Correlation coefficient", alpha = 0.5, transfm = "tanh", angle = 45, N = "N", cb = FALSE)
+
+```
+
+## Subsetting levels in orchard plots
+
+@fig-orchard1 looks pretty bad. There's very little data in most phyla. So, lets change this by restricting the plotting to only taxa with sufficient data. We can do this using the `at` argument to limit the prediction to only three phylo. 
+
+Here we'll demonstrate a two step approach which can also provide a table of the meta-analytic means which can be used in publications
+
+```{r}
+#| label: fig-lim_sub
+#| fig-cap: Orchard plot that subsets the levels
+
+# Use mod_results to first create a table. It takes the same arguments as orchard_plot()
+    lim_MR_results <- orchaRd::mod_results(lim_MR, mod = "Phylum", group = "Article",
+        data = lim, at = list(Phylum = c("Chordata", "Arthropoda", "Mollusca")), subset = TRUE)
+
+# Now, we can feed in the mod_results() table directly to orchaRd
+    orchaRd::orchard_plot(lim_MR_results, data = lim, xlab = "Correlation coefficient",
+    transfm = "tanh", g = TRUE, angle = 45)
+```
+
+Ok, this is more useful, but lets also make a nice table with the `mod_results` to report in our meta-analysis, which we can see in @tbl-lim.
+
+
+```{r}
+#| label: tbl-lim
+#| tbl-cap: Meta-analytic mean, 95% CIs, 95% PI's for the three phyla. To do this we need to extract the *mod_table* from the `orchaRd` object.
+
+gt(lim_MR_results$mod_table)
+```
+
+## Bubble plots
+
+We often have moderators that are continuous in meta-analyis, particularly when considering things like publication bias. Here, `bubble_plots` can be extremely useful (@fig-bubble). 
+
+
+```{r}
+#| label: fig-bubble
+#| fig-cap: Bubble plot looking at how effect size changes with year from studies conducted in the wild and captivity.
+
+# We'll add publication year in to the data and calculate the sampling variance
+    lim[, "year"] <- as.numeric(lim$year)
+    lim$vi <- 1/(lim$N - 3)
+
+# Now, lets fit a meta-regerssion model that has an interaction between year and environment type.
+    model_lim2 <- metafor::rma.mv(yi = yi, V = vi, 
+                            mods = ~Environment * year, 
+                            random = list(~1 | Article, 
+                                        ~1 | Datapoint), 
+                            data = na.omit(lim))
+
+# Just like orchard_plots we just now put the model in
+    orchaRd::bubble_plot(model_lim2, mod = "year", group = "Article", data = na.omit(lim), by = "Environment", xlab = "Year",legend.pos = "top.left")
+
+```

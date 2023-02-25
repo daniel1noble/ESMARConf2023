@@ -41,12 +41,21 @@ rm(list = ls())
 devtools::install_github("daniel1noble/orchaRd")
 # install.packages("pacman")
 pacman::p_load(devtools, tidyverse, metafor, patchwork, 
-        R.rsp, orchaRd, emmeans, ape, phytools, gt, flextable)
+        R.rsp, orchaRd, emmeans, ape, phytools, gt, flextable, downlit)
 options(digits = 3, scipen = 2)
 ```
 
+
+```{r}
+#| label: ref
+#| echo: false
+emmeans <- gsub("emmeans::emmeans", "emmeans", autolink("emmeans::emmeans"))
+tidyverse <- gsub("tidyverse::tidyverse", "tidyverse", autolink("tidyverse::tidyverse"))
+
+```
+
 :::{.column-margin}
-Techncially we don't need all these packages to download `orchaRd`, but we'll use them throughout the examples. `orchaRd` does rely heavly on the `emmeans` and `tidyverse` packages. You will need to ensure that you have R updated to the required version for `emmeans` to work as it has version requirements.
+Techncially we don't need all these packages to download `orchaRd`, but we'll use them throughout the examples. `orchaRd` does rely heavly on the `r emmeans` and `r tidyverse` packages. You will need to ensure that you have R updated to the required version for `emmeans` to work as it has version requirements.
 :::
 
 We also have a [detailed vignette](https://daniel1noble.github.io/orchaRd/) which will show much of it's functionality.
@@ -167,7 +176,7 @@ We often have moderators that are continuous in meta-analyis, particularly when 
 
 # Orchard plots with marginalised means
 
-One of the main limitations of `orchaRd` (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the `emmeans` package circumvents that limitation because a full model can be fit and mean effect size predcited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). 
+One of the main limitations of `orchaRd` (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the `r emmeans` package circumvents that limitation because a full model can be fit and mean effect size predcited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). 
 
 # Orchard plots from models with heterogeneous variance
 

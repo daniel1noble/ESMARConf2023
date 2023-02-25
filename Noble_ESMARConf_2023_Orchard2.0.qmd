@@ -174,7 +174,7 @@ We often have moderators that are continuous in meta-analyis, particularly when 
 
 ```
 
-# Orchard plots with marginalised means
+# Orchard plots with marginalised means {#sec-marginal}
 
 One of the main limitations of `orchaRd` (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the `r emmeans` package circumvents that limitation because a full model can be fit and mean effect size predicited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). 
 
@@ -211,5 +211,29 @@ orchaRd::orchard_plot(model_odea, group = "group_ID", mod = "trait.type", at = l
 
 
 # Orchard plots from models with heterogeneous variance
+
+A key assumption of many meta-analytic models is homogeneity of variance. `metafor` is capcable of releaxing this assumption and it can be extremely improtant for inferential tests. `orchard` can handle models with heterogenous variance across groups. 
+
+Let's expand the model we covered in @sec-marginal to now relax the assumption of heterogeneous variance in our trait categories.
+
+```{r}
+#| label: odea_het
+#| fig-cap: Orchard plot of @ODea2019 data that includes modelling heterogeneous variance across trait categories. 
+
+model_het <- metafor::rma.mv(yi = lnrr, V = lnrr_vi, 
+    mods = ~experimental_design + trait.type + deg_dif + treat_end_days, method = "REML", test = "t", 
+    random = list(~1 | group_ID,
+                  ~1 + trait.type | es_ID), 
+    rho = 0, struc = "HCS", data = fish, control = list(optimizer = "optim", optmethod = "Nelder-Mead"))
+
+orchaRd::orchard_plot(model_het, group = "group_ID", mod = "trait.type", at = list(deg_dif = c(5, 10, 15)), by = "deg_dif", xlab = "lnRR", data = fish, angle = 45, g = FALSE, legend.pos = "top.left", condition.lab = "Degree Difference") + theme(legend.direction = "vertical")
+```
+
+We can now see that the residual variability in each of the 4 traot categories is no longer assumed to be the same. 
+
+```{r}
+#| label: tbl-odea-het
+#| 
+```
 
 # References

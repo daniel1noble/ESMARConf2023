@@ -176,7 +176,39 @@ We often have moderators that are continuous in meta-analyis, particularly when 
 
 # Orchard plots with marginalised means
 
-One of the main limitations of `orchaRd` (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the `r emmeans` package circumvents that limitation because a full model can be fit and mean effect size predcited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). 
+One of the main limitations of `orchaRd` (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the `r emmeans` package circumvents that limitation because a full model can be fit and mean effect size predicited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). 
+
+To demonstrate how this works, we'll turn to a new meta-analysis by @ODea2019.
+
+```{r}
+#| label: odea
+#| echo: true
+
+# Load the dataset that comes with orchaRd
+    data(fish)
+
+# We'll now fit the 'multimoderator' meta-regression model
+    model_odea <- metafor::rma.mv(yi = lnrr, V = lnrr_vi, 
+            mods = ~experimental_design + trait.type + deg_dif + treat_end_days, method = "REML", test = "t", 
+            random = list(~1 | group_ID,
+                          ~1 | es_ID), 
+            data = fish, 
+            control = list(optimizer = "optim", optmethod = "Nelder-Mead"))
+
+    model_odea
+
+```
+
+You'll notice here that we have fit a number of moderators including the type of trait (`trait.type`) and experimental design (`experimental_design`), and we have controlled for the temperature difference between treatments (`deg_diff`) and how long treatments were applied (`treat_end_days`). Obviously, you'll want to be sure you have enough data to fit such a model, but for demonstration purposes, this will do. 
+
+We can now make an `orchard_plot`, but how do we do this given there are so many variables? The key arguments you'll want to know are `at`, and `by` arguments, which allows us to control at what levels we want to marginalise the means to. Here, we want to know teh meta-analytic mean for the different trait categories, but how it changes with larger temperature differences (`deg_days`). It will then predict these means marginalising across all the other moderators in the model. 
+
+```{r}
+#| label: fig-odea
+#| fig-cap: Orchard plot of marginalised meta-analytic mean estimates for four different trait categories (life-history, morphology, physiology and behaviour)
+orchaRd::orchard_plot(model_odea, group = "group_ID", mod = "trait.type", at = list(deg_dif = c(5, 10, 15)), by = "deg_dif", xlab = "lnRR", data = fish, angle = 45, g = FALSE, legend.pos = "top.left", condition.lab = "Degree Difference") + theme(legend.direction = "vertical")
+```
+
 
 # Orchard plots from models with heterogeneous variance
 

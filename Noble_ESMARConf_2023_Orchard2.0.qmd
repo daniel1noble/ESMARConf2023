@@ -217,7 +217,7 @@ A key assumption of many meta-analytic models is homogeneity of variance. `metaf
 Let's expand the model we covered in @sec-marginal to now relax the assumption of heterogeneous variance in our trait categories.
 
 ```{r}
-#| label: odea_het
+#| label: fig-odea_het
 #| fig-cap: Orchard plot of @ODea2019 data that includes modelling heterogeneous variance across trait categories. 
 
 model_het <- metafor::rma.mv(yi = lnrr, V = lnrr_vi, 
@@ -229,11 +229,31 @@ model_het <- metafor::rma.mv(yi = lnrr, V = lnrr_vi,
 orchaRd::orchard_plot(model_het, group = "group_ID", mod = "trait.type", at = list(deg_dif = c(5, 10, 15)), by = "deg_dif", xlab = "lnRR", data = fish, angle = 45, g = FALSE, legend.pos = "top.left", condition.lab = "Degree Difference") + theme(legend.direction = "vertical")
 ```
 
-We can now see that the residual variability in each of the 4 traot categories is no longer assumed to be the same. 
-
+:::{.column-margin}
 ```{r}
 #| label: tbl-odea-het
-#| 
+#| tbl-cap: Table output for Figure 5.
+
+tbl_odea <- orchaRd::mod_results(model_het, group = "group_ID", mod = "trait.type", at = list(deg_dif = c(5, 10, 15)), by = "deg_dif", weights = "prop", data = fish)
+
+gt(tbl_odea$mod_table)
+
 ```
+:::
+
+We can now see that the residual variability in each of the 4 trait categories is no longer assumed to be the same. 
+
+# Additional Functions
+
+`orchaRd` 2.0 also has additional functions that are quite useful in meta-analysis, which are detailed in @tbl-final.
+
+| **Function**  | **Description**  |
+|--|--------|
+| `i2_ml()`  | Calculates various $I^2$ metrics (depending on how many random effects are in the model) for multi-level meta-analysis, including $I^2_{total}$, which is the proportion of total variance in effects excluding sampling variance |
+| `r2_ml()`   | Calculate $R^2$ for the model. Both marginal and conditional $R^2$ are provided. See @Nakagawa2013. |
+| `submerge()` |Merges two `mod_results` tables together. Useful for creating orchard plots where the overall meta-analytic mean is presented below meta-regression models. |
+
+: Useful functions in orchaRd 2.0 and a decsription of what they do.
+{#tbl-final}
 
 # References

@@ -118,6 +118,7 @@ div.csl-indent {
 <link href="Noble_ESMARConf_2023_Orchard2.0_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="Noble_ESMARConf_2023_Orchard2.0_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -139,7 +140,8 @@ div.csl-indent {
   </ul></li>
   <li><a href="#sec-marginal" id="toc-sec-marginal" class="nav-link" data-scroll-target="#sec-marginal"><span class="toc-section-number">3</span>  Orchard plots with marginalised means</a></li>
   <li><a href="#orchard-plots-from-models-with-heterogeneous-variance" id="toc-orchard-plots-from-models-with-heterogeneous-variance" class="nav-link" data-scroll-target="#orchard-plots-from-models-with-heterogeneous-variance"><span class="toc-section-number">4</span>  Orchard plots from models with heterogeneous variance</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">5</span>  References</a></li>
+  <li><a href="#additional-functions" id="toc-additional-functions" class="nav-link" data-scroll-target="#additional-functions"><span class="toc-section-number">5</span>  Additional Functions</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="toc-section-number">6</span>  References</a></li>
   </ul>
 </nav>
 </div>
@@ -281,12 +283,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="cell-output-display">
 <div id="tbl-args" class="anchored">
 
-<div id="lbircielic" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="ouffubaden" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#lbircielic) .gt_table {
+:where(#ouffubaden) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -311,7 +313,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-left-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_heading {
+:where(#ouffubaden) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -323,12 +325,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_caption {
+:where(#ouffubaden) .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#lbircielic) .gt_title {
+:where(#ouffubaden) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -340,7 +342,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-bottom-width: 0;
 }
 
-:where(#lbircielic) .gt_subtitle {
+:where(#ouffubaden) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -352,13 +354,13 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-top-width: 0;
 }
 
-:where(#lbircielic) .gt_bottom_border {
+:where(#ouffubaden) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_col_headings {
+:where(#ouffubaden) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -373,7 +375,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_col_heading {
+:where(#ouffubaden) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -393,7 +395,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   overflow-x: hidden;
 }
 
-:where(#lbircielic) .gt_column_spanner_outer {
+:where(#ouffubaden) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -405,15 +407,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 4px;
 }
 
-:where(#lbircielic) .gt_column_spanner_outer:first-child {
+:where(#ouffubaden) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#lbircielic) .gt_column_spanner_outer:last-child {
+:where(#ouffubaden) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#lbircielic) .gt_column_spanner {
+:where(#ouffubaden) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -425,7 +427,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   width: 100%;
 }
 
-:where(#lbircielic) .gt_group_heading {
+:where(#ouffubaden) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -451,7 +453,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   text-align: left;
 }
 
-:where(#lbircielic) .gt_empty_group_heading {
+:where(#ouffubaden) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -466,15 +468,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   vertical-align: middle;
 }
 
-:where(#lbircielic) .gt_from_md > :first-child {
+:where(#ouffubaden) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#lbircielic) .gt_from_md > :last-child {
+:where(#ouffubaden) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#lbircielic) .gt_row {
+:where(#ouffubaden) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -493,7 +495,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   overflow-x: hidden;
 }
 
-:where(#lbircielic) .gt_stub {
+:where(#ouffubaden) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -506,7 +508,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#lbircielic) .gt_stub_row_group {
+:where(#ouffubaden) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -520,11 +522,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   vertical-align: top;
 }
 
-:where(#lbircielic) .gt_row_group_first td {
+:where(#ouffubaden) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#lbircielic) .gt_summary_row {
+:where(#ouffubaden) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -534,16 +536,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#lbircielic) .gt_first_summary_row {
+:where(#ouffubaden) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_first_summary_row.thick {
+:where(#ouffubaden) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#lbircielic) .gt_last_summary_row {
+:where(#ouffubaden) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -553,7 +555,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_grand_summary_row {
+:where(#ouffubaden) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -563,7 +565,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#lbircielic) .gt_first_grand_summary_row {
+:where(#ouffubaden) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -573,11 +575,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-top-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_striped {
+:where(#ouffubaden) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#lbircielic) .gt_table_body {
+:where(#ouffubaden) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -586,7 +588,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_footnotes {
+:where(#ouffubaden) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -600,7 +602,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_footnote {
+:where(#ouffubaden) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -609,7 +611,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#lbircielic) .gt_sourcenotes {
+:where(#ouffubaden) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -623,7 +625,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#lbircielic) .gt_sourcenote {
+:where(#ouffubaden) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -631,64 +633,64 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#lbircielic) .gt_left {
+:where(#ouffubaden) .gt_left {
   text-align: left;
 }
 
-:where(#lbircielic) .gt_center {
+:where(#ouffubaden) .gt_center {
   text-align: center;
 }
 
-:where(#lbircielic) .gt_right {
+:where(#ouffubaden) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#lbircielic) .gt_font_normal {
+:where(#ouffubaden) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#lbircielic) .gt_font_bold {
+:where(#ouffubaden) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#lbircielic) .gt_font_italic {
+:where(#ouffubaden) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#lbircielic) .gt_super {
+:where(#ouffubaden) .gt_super {
   font-size: 65%;
 }
 
-:where(#lbircielic) .gt_footnote_marks {
+:where(#ouffubaden) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#lbircielic) .gt_asterisk {
+:where(#ouffubaden) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#lbircielic) .gt_indent_1 {
+:where(#ouffubaden) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#lbircielic) .gt_indent_2 {
+:where(#ouffubaden) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#lbircielic) .gt_indent_3 {
+:where(#ouffubaden) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#lbircielic) .gt_indent_4 {
+:where(#ouffubaden) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#lbircielic) .gt_indent_5 {
+:where(#ouffubaden) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -768,12 +770,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <div class="cell-output-display">
 <div id="tbl-lim" class="anchored">
 
-<div id="hkbpntmipy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="imuldgbeuu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#hkbpntmipy) .gt_table {
+:where(#imuldgbeuu) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -798,7 +800,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-left-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_heading {
+:where(#imuldgbeuu) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -810,12 +812,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_caption {
+:where(#imuldgbeuu) .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-:where(#hkbpntmipy) .gt_title {
+:where(#imuldgbeuu) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -827,7 +829,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-bottom-width: 0;
 }
 
-:where(#hkbpntmipy) .gt_subtitle {
+:where(#imuldgbeuu) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -839,13 +841,13 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-top-width: 0;
 }
 
-:where(#hkbpntmipy) .gt_bottom_border {
+:where(#imuldgbeuu) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_col_headings {
+:where(#imuldgbeuu) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -860,7 +862,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_col_heading {
+:where(#imuldgbeuu) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -880,7 +882,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   overflow-x: hidden;
 }
 
-:where(#hkbpntmipy) .gt_column_spanner_outer {
+:where(#imuldgbeuu) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -892,15 +894,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 4px;
 }
 
-:where(#hkbpntmipy) .gt_column_spanner_outer:first-child {
+:where(#imuldgbeuu) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#hkbpntmipy) .gt_column_spanner_outer:last-child {
+:where(#imuldgbeuu) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#hkbpntmipy) .gt_column_spanner {
+:where(#imuldgbeuu) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -912,7 +914,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   width: 100%;
 }
 
-:where(#hkbpntmipy) .gt_group_heading {
+:where(#imuldgbeuu) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -938,7 +940,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   text-align: left;
 }
 
-:where(#hkbpntmipy) .gt_empty_group_heading {
+:where(#imuldgbeuu) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -953,15 +955,15 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   vertical-align: middle;
 }
 
-:where(#hkbpntmipy) .gt_from_md > :first-child {
+:where(#imuldgbeuu) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#hkbpntmipy) .gt_from_md > :last-child {
+:where(#imuldgbeuu) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#hkbpntmipy) .gt_row {
+:where(#imuldgbeuu) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -980,7 +982,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   overflow-x: hidden;
 }
 
-:where(#hkbpntmipy) .gt_stub {
+:where(#imuldgbeuu) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -993,7 +995,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#hkbpntmipy) .gt_stub_row_group {
+:where(#imuldgbeuu) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1007,11 +1009,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   vertical-align: top;
 }
 
-:where(#hkbpntmipy) .gt_row_group_first td {
+:where(#imuldgbeuu) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#hkbpntmipy) .gt_summary_row {
+:where(#imuldgbeuu) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1021,16 +1023,16 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#hkbpntmipy) .gt_first_summary_row {
+:where(#imuldgbeuu) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_first_summary_row.thick {
+:where(#imuldgbeuu) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#hkbpntmipy) .gt_last_summary_row {
+:where(#imuldgbeuu) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1040,7 +1042,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_grand_summary_row {
+:where(#imuldgbeuu) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1050,7 +1052,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#hkbpntmipy) .gt_first_grand_summary_row {
+:where(#imuldgbeuu) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1060,11 +1062,11 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-top-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_striped {
+:where(#imuldgbeuu) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#hkbpntmipy) .gt_table_body {
+:where(#imuldgbeuu) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1073,7 +1075,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_footnotes {
+:where(#imuldgbeuu) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1087,7 +1089,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_footnote {
+:where(#imuldgbeuu) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -1096,7 +1098,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#hkbpntmipy) .gt_sourcenotes {
+:where(#imuldgbeuu) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1110,7 +1112,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   border-right-color: #D3D3D3;
 }
 
-:where(#hkbpntmipy) .gt_sourcenote {
+:where(#imuldgbeuu) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1118,64 +1120,64 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
   padding-right: 5px;
 }
 
-:where(#hkbpntmipy) .gt_left {
+:where(#imuldgbeuu) .gt_left {
   text-align: left;
 }
 
-:where(#hkbpntmipy) .gt_center {
+:where(#imuldgbeuu) .gt_center {
   text-align: center;
 }
 
-:where(#hkbpntmipy) .gt_right {
+:where(#imuldgbeuu) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#hkbpntmipy) .gt_font_normal {
+:where(#imuldgbeuu) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#hkbpntmipy) .gt_font_bold {
+:where(#imuldgbeuu) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#hkbpntmipy) .gt_font_italic {
+:where(#imuldgbeuu) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#hkbpntmipy) .gt_super {
+:where(#imuldgbeuu) .gt_super {
   font-size: 65%;
 }
 
-:where(#hkbpntmipy) .gt_footnote_marks {
+:where(#imuldgbeuu) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#hkbpntmipy) .gt_asterisk {
+:where(#imuldgbeuu) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#hkbpntmipy) .gt_indent_1 {
+:where(#imuldgbeuu) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#hkbpntmipy) .gt_indent_2 {
+:where(#imuldgbeuu) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#hkbpntmipy) .gt_indent_3 {
+:where(#imuldgbeuu) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#hkbpntmipy) .gt_indent_4 {
+:where(#imuldgbeuu) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#hkbpntmipy) .gt_indent_5 {
+:where(#imuldgbeuu) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1328,21 +1330,607 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section id="orchard-plots-from-models-with-heterogeneous-variance" class="level1" data-number="4">
+<section id="orchard-plots-from-models-with-heterogeneous-variance" class="level1 page-columns page-full" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Orchard plots from models with heterogeneous variance</h1>
 <p>A key assumption of many meta-analytic models is homogeneity of variance. <code>metafor</code> is capcable of releaxing this assumption and it can be extremely improtant for inferential tests. <code>orchard</code> can handle models with heterogenous variance across groups.</p>
-<p>Let’s expand the model we covered in <a href="#sec-marginal">Section&nbsp;3</a>.</p>
+<p>Let’s expand the model we covered in <a href="#sec-marginal">Section&nbsp;3</a> to now relax the assumption of heterogeneous variance in our trait categories.</p>
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model_het <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> lnrr, <span class="at">V =</span> lnrr_vi, </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">mods =</span> <span class="sc">~</span>experimental_design <span class="sc">+</span> trait.type <span class="sc">+</span> deg_dif <span class="sc">+</span> treat_end_days, <span class="at">method =</span> <span class="st">"REML"</span>, <span class="at">test =</span> <span class="st">"t"</span>, </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> group_ID,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">~</span><span class="dv">1</span> <span class="sc">+</span> trait.type <span class="sc">|</span> es_ID), </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">rho =</span> <span class="dv">0</span>, <span class="at">struc =</span> <span class="st">"HCS"</span>, <span class="at">data =</span> fish, <span class="at">control =</span> <span class="fu">list</span>(<span class="at">optimizer =</span> <span class="st">"optim"</span>, <span class="at">optmethod =</span> <span class="st">"Nelder-Mead"</span>))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(model_het, <span class="at">group =</span> <span class="st">"group_ID"</span>, <span class="at">mod =</span> <span class="st">"trait.type"</span>, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">deg_dif =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="at">by =</span> <span class="st">"deg_dif"</span>, <span class="at">xlab =</span> <span class="st">"lnRR"</span>, <span class="at">data =</span> fish, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">g =</span> <span class="cn">FALSE</span>, <span class="at">legend.pos =</span> <span class="st">"top.left"</span>, <span class="at">condition.lab =</span> <span class="st">"Degree Difference"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.direction =</span> <span class="st">"vertical"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="fig-odea_het" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Noble_ESMARConf_2023_Orchard2.0_files/figure-html/fig-odea_het-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;5: Orchard plot of <span class="citation" data-cites="ODea2019">O’Dea et al. (<a href="#ref-ODea2019" role="doc-biblioref">2019</a>)</span> data that includes modelling heterogeneous variance across trait categories.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="cell">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tbl_odea <span class="ot">&lt;-</span> orchaRd<span class="sc">::</span><span class="fu">mod_results</span>(model_het, <span class="at">group =</span> <span class="st">"group_ID"</span>, <span class="at">mod =</span> <span class="st">"trait.type"</span>, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">deg_dif =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="at">by =</span> <span class="st">"deg_dif"</span>, <span class="at">weights =</span> <span class="st">"prop"</span>, <span class="at">data =</span> fish)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(tbl_odea<span class="sc">$</span>mod_table)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div id="tbl-odea-het" class="anchored">
+
+<div id="yurwmnpvgf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
+}
+
+:where(#yurwmnpvgf) .gt_table {
+  display: table;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+:where(#yurwmnpvgf) .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+:where(#yurwmnpvgf) .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 0;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+:where(#yurwmnpvgf) .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+:where(#yurwmnpvgf) .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+:where(#yurwmnpvgf) .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+:where(#yurwmnpvgf) .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+:where(#yurwmnpvgf) .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+:where(#yurwmnpvgf) .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+:where(#yurwmnpvgf) .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+:where(#yurwmnpvgf) .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+:where(#yurwmnpvgf) .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+:where(#yurwmnpvgf) .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+:where(#yurwmnpvgf) .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yurwmnpvgf) .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+:where(#yurwmnpvgf) .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+:where(#yurwmnpvgf) .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yurwmnpvgf) .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+:where(#yurwmnpvgf) .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yurwmnpvgf) .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+:where(#yurwmnpvgf) .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yurwmnpvgf) .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+:where(#yurwmnpvgf) .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+:where(#yurwmnpvgf) .gt_left {
+  text-align: left;
+}
+
+:where(#yurwmnpvgf) .gt_center {
+  text-align: center;
+}
+
+:where(#yurwmnpvgf) .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+:where(#yurwmnpvgf) .gt_font_normal {
+  font-weight: normal;
+}
+
+:where(#yurwmnpvgf) .gt_font_bold {
+  font-weight: bold;
+}
+
+:where(#yurwmnpvgf) .gt_font_italic {
+  font-style: italic;
+}
+
+:where(#yurwmnpvgf) .gt_super {
+  font-size: 65%;
+}
+
+:where(#yurwmnpvgf) .gt_footnote_marks {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 75%;
+  vertical-align: 0.4em;
+}
+
+:where(#yurwmnpvgf) .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+:where(#yurwmnpvgf) .gt_indent_1 {
+  text-indent: 5px;
+}
+
+:where(#yurwmnpvgf) .gt_indent_2 {
+  text-indent: 10px;
+}
+
+:where(#yurwmnpvgf) .gt_indent_3 {
+  text-indent: 15px;
+}
+
+:where(#yurwmnpvgf) .gt_indent_4 {
+  text-indent: 20px;
+}
+
+:where(#yurwmnpvgf) .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table"><caption>Table&nbsp;3:  Table output for Figure 5. </caption>
+  
+  <thead class="gt_col_headings">
+    <tr>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="name">name</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="condition">condition</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="estimate">estimate</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="lowerCL">lowerCL</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="upperCL">upperCL</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="lowerPR">lowerPR</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="upperPR">upperPR</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="name" class="gt_row gt_center">Behaviour</td>
+<td headers="condition" class="gt_row gt_right">5</td>
+<td headers="estimate" class="gt_row gt_right">0.17752</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.3589</td>
+<td headers="upperCL" class="gt_row gt_right">0.7139</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.905</td>
+<td headers="upperPR" class="gt_row gt_right">1.260</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Life-history</td>
+<td headers="condition" class="gt_row gt_right">5</td>
+<td headers="estimate" class="gt_row gt_right">0.73075</td>
+<td headers="lowerCL" class="gt_row gt_right">0.2327</td>
+<td headers="upperCL" class="gt_row gt_right">1.2288</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.334</td>
+<td headers="upperPR" class="gt_row gt_right">1.795</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Morphology</td>
+<td headers="condition" class="gt_row gt_right">5</td>
+<td headers="estimate" class="gt_row gt_right">-0.00716</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.0424</td>
+<td headers="upperCL" class="gt_row gt_right">0.0281</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.386</td>
+<td headers="upperPR" class="gt_row gt_right">0.372</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Physiology</td>
+<td headers="condition" class="gt_row gt_right">5</td>
+<td headers="estimate" class="gt_row gt_right">0.00862</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.0559</td>
+<td headers="upperCL" class="gt_row gt_right">0.0731</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.419</td>
+<td headers="upperPR" class="gt_row gt_right">0.437</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Behaviour</td>
+<td headers="condition" class="gt_row gt_right">10</td>
+<td headers="estimate" class="gt_row gt_right">0.13223</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.4081</td>
+<td headers="upperCL" class="gt_row gt_right">0.6726</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.952</td>
+<td headers="upperPR" class="gt_row gt_right">1.217</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Life-history</td>
+<td headers="condition" class="gt_row gt_right">10</td>
+<td headers="estimate" class="gt_row gt_right">0.68547</td>
+<td headers="lowerCL" class="gt_row gt_right">0.1841</td>
+<td headers="upperCL" class="gt_row gt_right">1.1869</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.381</td>
+<td headers="upperPR" class="gt_row gt_right">1.751</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Morphology</td>
+<td headers="condition" class="gt_row gt_right">10</td>
+<td headers="estimate" class="gt_row gt_right">-0.05245</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.1179</td>
+<td headers="upperCL" class="gt_row gt_right">0.0130</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.436</td>
+<td headers="upperPR" class="gt_row gt_right">0.331</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Physiology</td>
+<td headers="condition" class="gt_row gt_right">10</td>
+<td headers="estimate" class="gt_row gt_right">-0.03667</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.1223</td>
+<td headers="upperCL" class="gt_row gt_right">0.0490</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.468</td>
+<td headers="upperPR" class="gt_row gt_right">0.395</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Behaviour</td>
+<td headers="condition" class="gt_row gt_right">15</td>
+<td headers="estimate" class="gt_row gt_right">0.08694</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.4618</td>
+<td headers="upperCL" class="gt_row gt_right">0.6357</td>
+<td headers="lowerPR" class="gt_row gt_right">-1.002</td>
+<td headers="upperPR" class="gt_row gt_right">1.176</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Life-history</td>
+<td headers="condition" class="gt_row gt_right">15</td>
+<td headers="estimate" class="gt_row gt_right">0.64018</td>
+<td headers="lowerCL" class="gt_row gt_right">0.1306</td>
+<td headers="upperCL" class="gt_row gt_right">1.1497</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.430</td>
+<td headers="upperPR" class="gt_row gt_right">1.710</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Morphology</td>
+<td headers="condition" class="gt_row gt_right">15</td>
+<td headers="estimate" class="gt_row gt_right">-0.09774</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.2086</td>
+<td headers="upperCL" class="gt_row gt_right">0.0131</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.491</td>
+<td headers="upperPR" class="gt_row gt_right">0.296</td></tr>
+    <tr><td headers="name" class="gt_row gt_center">Physiology</td>
+<td headers="condition" class="gt_row gt_right">15</td>
+<td headers="estimate" class="gt_row gt_right">-0.08196</td>
+<td headers="lowerCL" class="gt_row gt_right">-0.2063</td>
+<td headers="upperCL" class="gt_row gt_right">0.0424</td>
+<td headers="lowerPR" class="gt_row gt_right">-0.523</td>
+<td headers="upperPR" class="gt_row gt_right">0.359</td></tr>
+  </tbody>
+  
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div></div><p>We can now see that the residual variability in each of the 4 trait categories is no longer assumed to be the same.</p>
 </section>
-<section id="references" class="level1" data-number="5">
+<section id="additional-functions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Additional Functions</h1>
+<p><code>orchaRd</code> 2.0 also has additional functions that are quite useful in meta-analysis, which are detailed in <a href="#tbl-final">Table&nbsp;4</a>.</p>
+<div id="tbl-final" class="anchored">
+<table class="table">
+<caption>Table&nbsp;4: Useful functions in orchaRd 2.0 and a decsription of what they do. </caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 80%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Function</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>i2_ml()</code></td>
+<td>Calculates various <span class="math inline">\(I^2\)</span> metrics (depending on how many random effects are in the model) for multi-level meta-analysis, including <span class="math inline">\(I^2_{total}\)</span>, which is the proportion of total variance in effects excluding sampling variance</td>
+</tr>
+<tr class="even">
+<td><code>r2_ml()</code></td>
+<td>Calculate <span class="math inline">\(R^2\)</span> for the model. Both marginal and conditional <span class="math inline">\(R^2\)</span> are provided. See <span class="citation" data-cites="Nakagawa2013">Nakagawa and Schielzeth (<a href="#ref-Nakagawa2013" role="doc-biblioref">2013</a>)</span>.</td>
+</tr>
+<tr class="odd">
+<td><code>submerge()</code></td>
+<td>Merges two <code>mod_results</code> tables together. Useful for creating orchard plots where the overall meta-analytic mean is presented below meta-regression models.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="references" class="level1" data-number="6">
 
 <!-- -->
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">5 References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">6 References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
 <div id="ref-Lim2014" class="csl-entry" role="doc-biblioentry">
 Lim, J. N., A. M. Senior, and S. Nakagawa. 2014. <span>“Heterogeneity in Individual Quality and Reproductive Trade-Offs Within Species.”</span> <em>Evolution</em> 68 (8): 2306–18. doi: 10.1111/evo.12446.
+</div>
+<div id="ref-Nakagawa2013" class="csl-entry" role="doc-biblioentry">
+Nakagawa, S., and H. Schielzeth. 2013. <span>“A General and Simple Method for Obtaining R2 from Generalized Linear Mixed‐effects Models.”</span> <em>Methods in Ecology and Evolution</em> 4 (2): 133–42.
 </div>
 <div id="ref-ODea2019" class="csl-entry" role="doc-biblioentry">
 O’Dea, Rose E., Malgorzata Lagisz, Andrew P. Hendry, and Shinichi Nakagawa. 2019. <span>“Developmental Temperature Affects Phenotypic Means and Variability: A Meta-Analysis of Fish Data.”</span> <em>Fish and Fisheries</em> 20: 1005–22.
@@ -1533,225 +2121,265 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb11" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "**orchaRd 2.0** Tutorial: ESMARConf2023"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Daniel Noble</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "`r Sys.Date()`"</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [./bib/ref.bib]</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="an">biblio-style:</span><span class="co"> ./bib/methods-in-ecology-and-evolution.csl</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"> html:</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: simplex</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: show</span></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-overflow: wrap</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-title: "**Table of Contents**"</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: index.html</span></span>
-<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="an">crossref:</span><span class="co"> </span></span>
-<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-title: Figure</span></span>
-<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="an">width:</span><span class="co"> 10</span></span>
-<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
-<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a><span class="co">    warning: false</span></span>
-<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># How to Download and Install Orchard (vers. 2.0)</span></span>
-<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>Orchard 2.0 is not yet on **CRAN**. You can download the package by visiting our <span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/daniel1noble/orchaRd)</span> page. </span>
-<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
-<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>If you don't already have the <span class="in">`pacman`</span> package **remember to unannotate code line 3**</span>
-<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-36"><a href="#cb11-36" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: packages</span></span>
-<span id="cb11-37"><a href="#cb11-37" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb11-38"><a href="#cb11-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
-<span id="cb11-39"><a href="#cb11-39" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-line-numbers: true</span></span>
-<span id="cb11-40"><a href="#cb11-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-overflow: scroll</span></span>
-<span id="cb11-41"><a href="#cb11-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-42"><a href="#cb11-42" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
-<span id="cb11-43"><a href="#cb11-43" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"daniel1noble/orchaRd"</span>)</span>
-<span id="cb11-44"><a href="#cb11-44" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pacman")</span></span>
-<span id="cb11-45"><a href="#cb11-45" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(devtools, tidyverse, metafor, patchwork, </span>
-<span id="cb11-46"><a href="#cb11-46" aria-hidden="true" tabindex="-1"></a>        R.rsp, orchaRd, emmeans, ape, phytools, gt, flextable, downlit)</span>
-<span id="cb11-47"><a href="#cb11-47" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">scipen =</span> <span class="dv">2</span>)</span>
-<span id="cb11-48"><a href="#cb11-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-49"><a href="#cb11-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-50"><a href="#cb11-50" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-53"><a href="#cb11-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-54"><a href="#cb11-54" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ref</span></span>
-<span id="cb11-55"><a href="#cb11-55" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb11-56"><a href="#cb11-56" aria-hidden="true" tabindex="-1"></a>emmeans <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"emmeans::emmeans"</span>, <span class="st">"emmeans"</span>, <span class="fu">autolink</span>(<span class="st">"emmeans::emmeans"</span>))</span>
-<span id="cb11-57"><a href="#cb11-57" aria-hidden="true" tabindex="-1"></a>tidyverse <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"tidyverse::tidyverse"</span>, <span class="st">"tidyverse"</span>, <span class="fu">autolink</span>(<span class="st">"tidyverse::tidyverse"</span>))</span>
-<span id="cb11-58"><a href="#cb11-58" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-59"><a href="#cb11-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-60"><a href="#cb11-60" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-61"><a href="#cb11-61" aria-hidden="true" tabindex="-1"></a>:::{.column-margin}</span>
-<span id="cb11-62"><a href="#cb11-62" aria-hidden="true" tabindex="-1"></a>Techncially we don't need all these packages to download <span class="in">`orchaRd`</span>, but we'll use them throughout the examples. <span class="in">`orchaRd`</span> does rely heavly on the <span class="in">`r emmeans`</span> and <span class="in">`r tidyverse`</span> packages. You will need to ensure that you have R updated to the required version for <span class="in">`emmeans`</span> to work as it has version requirements.</span>
-<span id="cb11-63"><a href="#cb11-63" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-64"><a href="#cb11-64" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-65"><a href="#cb11-65" aria-hidden="true" tabindex="-1"></a>We also have a <span class="co">[</span><span class="ot">detailed vignette</span><span class="co">](https://daniel1noble.github.io/orchaRd/)</span> which will show much of it's functionality.</span>
-<span id="cb11-66"><a href="#cb11-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-67"><a href="#cb11-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># Orchard and Bubble Plots</span></span>
-<span id="cb11-68"><a href="#cb11-68" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-69"><a href="#cb11-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lets load a dataset</span></span>
-<span id="cb11-70"><a href="#cb11-70" aria-hidden="true" tabindex="-1"></a>We'll use a very simple meta-analysis dataset that is attached to <span class="in">`orchaRd`</span> to demonstrate how you can make orchard plots and bubble plots from meta-regression models. The data come from @Lim2014. This is a meta-analysis comparing correlation coefficients (rather Fisher's *Z* Transformed Correlation), and is useful as it demonstrates a number of orchard plot functions</span>
-<span id="cb11-71"><a href="#cb11-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-74"><a href="#cb11-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-75"><a href="#cb11-75" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lim</span></span>
-<span id="cb11-76"><a href="#cb11-76" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-overflow: scroll</span></span>
-<span id="cb11-77"><a href="#cb11-77" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-line-numbers: true</span></span>
-<span id="cb11-78"><a href="#cb11-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-79"><a href="#cb11-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the lim dataset</span></span>
-<span id="cb11-80"><a href="#cb11-80" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(lim)</span>
-<span id="cb11-81"><a href="#cb11-81" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-82"><a href="#cb11-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Add in the sampling variance</span></span>
-<span id="cb11-83"><a href="#cb11-83" aria-hidden="true" tabindex="-1"></a>lim<span class="sc">$</span>vi <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(lim<span class="sc">$</span>N <span class="sc">-</span> <span class="dv">3</span>))<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb11-84"><a href="#cb11-84" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-85"><a href="#cb11-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Lets fit a meta-regression </span></span>
-<span id="cb11-86"><a href="#cb11-86" aria-hidden="true" tabindex="-1"></a>lim_MR <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> yi, <span class="at">V =</span> vi, </span>
-<span id="cb11-87"><a href="#cb11-87" aria-hidden="true" tabindex="-1"></a>                    <span class="at">mods =</span> <span class="sc">~</span>Phylum <span class="sc">-</span> <span class="dv">1</span>, </span>
-<span id="cb11-88"><a href="#cb11-88" aria-hidden="true" tabindex="-1"></a>                    <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Article, </span>
-<span id="cb11-89"><a href="#cb11-89" aria-hidden="true" tabindex="-1"></a>                                 <span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Datapoint), </span>
-<span id="cb11-90"><a href="#cb11-90" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> lim)</span>
-<span id="cb11-91"><a href="#cb11-91" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lim_MR)</span>
-<span id="cb11-92"><a href="#cb11-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-93"><a href="#cb11-93" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-94"><a href="#cb11-94" aria-hidden="true" tabindex="-1"></a>Here, we have fit a multi-level meta-regression model, with two random effects (Article / Study) and a within study variance. You will notice that we have a Phylum moderator as we are intersted in estimating the meta-analytic mean within each major phyla (@fig-orchard1). </span>
-<span id="cb11-95"><a href="#cb11-95" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-96"><a href="#cb11-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Orchard Plots</span></span>
-<span id="cb11-97"><a href="#cb11-97" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-98"><a href="#cb11-98" aria-hidden="true" tabindex="-1"></a>Using this model and data lets demonstrate how to make orchard plots. This can be done with the <span class="in">`orchard_plot`</span> function.</span>
-<span id="cb11-99"><a href="#cb11-99" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-100"><a href="#cb11-100" aria-hidden="true" tabindex="-1"></a>:::{.column-margin} </span>
-<span id="cb11-101"><a href="#cb11-101" aria-hidden="true" tabindex="-1"></a>If you're not sure what arguments <span class="in">`orchard_plot`</span> takes you can explore the vigette or ask for help using <span class="in">`?orchard_plot`</span></span>
-<span id="cb11-102"><a href="#cb11-102" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-103"><a href="#cb11-103" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-104"><a href="#cb11-104" aria-hidden="true" tabindex="-1"></a>:::{.column-margin} </span>
-<span id="cb11-105"><a href="#cb11-105" aria-hidden="true" tabindex="-1"></a><span class="in">`orchard_plot`</span> takes a few essential arguments:</span>
-<span id="cb11-106"><a href="#cb11-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-109"><a href="#cb11-109" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-110"><a href="#cb11-110" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-args</span></span>
-<span id="cb11-111"><a href="#cb11-111" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Key arguments</span></span>
-<span id="cb11-112"><a href="#cb11-112" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb11-113"><a href="#cb11-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-114"><a href="#cb11-114" aria-hidden="true" tabindex="-1"></a>argument <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"model"</span>, <span class="st">"mod"</span>, <span class="st">"data"</span>, <span class="st">"group"</span>, <span class="st">"xlab"</span>)</span>
-<span id="cb11-115"><a href="#cb11-115" aria-hidden="true" tabindex="-1"></a>descrp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The metafor model object (e.g., rma.mv)"</span>, <span class="st">"The moderator of interest (as a character). If you don't specify it will default to the overall meta-analytic mean"</span>, <span class="st">"The dataset used to fit the model"</span>, <span class="st">"The group you wish to tally N for within brackets"</span>, <span class="st">"The axis label for the effect size"</span>)</span>
-<span id="cb11-116"><a href="#cb11-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-117"><a href="#cb11-117" aria-hidden="true" tabindex="-1"></a>tab_arg  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">`</span><span class="at">Argument</span><span class="st">`</span> <span class="ot">=</span> argument,</span>
-<span id="cb11-118"><a href="#cb11-118" aria-hidden="true" tabindex="-1"></a>                    <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> descrp)</span>
-<span id="cb11-119"><a href="#cb11-119" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(tab_arg)</span>
-<span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-121"><a href="#cb11-121" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb11-122"><a href="#cb11-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-125"><a href="#cb11-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-126"><a href="#cb11-126" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-orchard1</span></span>
-<span id="cb11-127"><a href="#cb11-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot of the @Lim2014 meta-regression model. Plotted are meta-anlaytic means, 95% confidence intervals, 95% prediction intervals and the raw effect size data weighted by the the sample size. In this case, *k* is the number of effect sizes and the number of studies are provided within brackets.</span></span>
-<span id="cb11-128"><a href="#cb11-128" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-129"><a href="#cb11-129" aria-hidden="true" tabindex="-1"></a>orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(lim_MR, <span class="at">mod =</span> <span class="st">"Phylum"</span>, <span class="at">group =</span> <span class="st">"Article"</span>, <span class="at">data =</span> lim, <span class="at">xlab =</span> <span class="st">"Correlation coefficient"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">transfm =</span> <span class="st">"tanh"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">N =</span> <span class="st">"N"</span>, <span class="at">cb =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb11-130"><a href="#cb11-130" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-132"><a href="#cb11-132" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-133"><a href="#cb11-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## Subsetting levels in orchard plots</span></span>
-<span id="cb11-134"><a href="#cb11-134" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-135"><a href="#cb11-135" aria-hidden="true" tabindex="-1"></a>@fig-orchard1 looks pretty bad. There's very little data in most phyla. So, lets change this by restricting the plotting to only taxa with sufficient data. We can do this using the <span class="in">`at`</span> argument along with <span class="in">`subset = TRUE`</span> to limit the prediction to only three phyla. </span>
-<span id="cb11-136"><a href="#cb11-136" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-137"><a href="#cb11-137" aria-hidden="true" tabindex="-1"></a>Here we'll demonstrate a two step approach which can also provide a table of the meta-analytic means which can be used in publications</span>
-<span id="cb11-138"><a href="#cb11-138" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-141"><a href="#cb11-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-142"><a href="#cb11-142" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-lim_sub</span></span>
-<span id="cb11-143"><a href="#cb11-143" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot that subsets the levels</span></span>
-<span id="cb11-144"><a href="#cb11-144" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-145"><a href="#cb11-145" aria-hidden="true" tabindex="-1"></a><span class="co"># Use mod_results to first create a table. It takes the same arguments as orchard_plot()</span></span>
-<span id="cb11-146"><a href="#cb11-146" aria-hidden="true" tabindex="-1"></a>    lim_MR_results <span class="ot">&lt;-</span> orchaRd<span class="sc">::</span><span class="fu">mod_results</span>(lim_MR, <span class="at">mod =</span> <span class="st">"Phylum"</span>, <span class="at">group =</span> <span class="st">"Article"</span>,</span>
-<span id="cb11-147"><a href="#cb11-147" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> lim, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">Phylum =</span> <span class="fu">c</span>(<span class="st">"Chordata"</span>, <span class="st">"Arthropoda"</span>, <span class="st">"Mollusca"</span>)), <span class="at">subset =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb11-148"><a href="#cb11-148" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-149"><a href="#cb11-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, we can feed in the mod_results() table directly to orchaRd</span></span>
-<span id="cb11-150"><a href="#cb11-150" aria-hidden="true" tabindex="-1"></a>    orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(lim_MR_results, <span class="at">data =</span> lim, <span class="at">xlab =</span> <span class="st">"Correlation coefficient"</span>,</span>
-<span id="cb11-151"><a href="#cb11-151" aria-hidden="true" tabindex="-1"></a>    <span class="at">transfm =</span> <span class="st">"tanh"</span>, <span class="at">g =</span> <span class="cn">TRUE</span>, <span class="at">angle =</span> <span class="dv">45</span>)</span>
-<span id="cb11-152"><a href="#cb11-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-153"><a href="#cb11-153" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-154"><a href="#cb11-154" aria-hidden="true" tabindex="-1"></a>Ok, this is more useful, but lets also make a nice table with the <span class="in">`mod_results`</span> to report in our meta-analysis, which we can see in @tbl-lim.</span>
-<span id="cb11-155"><a href="#cb11-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-156"><a href="#cb11-156" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-159"><a href="#cb11-159" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-160"><a href="#cb11-160" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-lim</span></span>
-<span id="cb11-161"><a href="#cb11-161" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Meta-analytic mean, 95% CIs, 95% PI's for the three phyla. To do this we need to extract the *mod_table* from the `orchaRd` object.</span></span>
-<span id="cb11-162"><a href="#cb11-162" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-163"><a href="#cb11-163" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(lim_MR_results<span class="sc">$</span>mod_table)</span>
-<span id="cb11-164"><a href="#cb11-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-165"><a href="#cb11-165" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-166"><a href="#cb11-166" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bubble plots</span></span>
-<span id="cb11-167"><a href="#cb11-167" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-168"><a href="#cb11-168" aria-hidden="true" tabindex="-1"></a>We often have moderators that are continuous in meta-analyis, particularly when considering things like publication bias. Here, <span class="in">`bubble_plots`</span> can be extremely useful (@fig-bubble). </span>
-<span id="cb11-169"><a href="#cb11-169" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-170"><a href="#cb11-170" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-173"><a href="#cb11-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-174"><a href="#cb11-174" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-bubble</span></span>
-<span id="cb11-175"><a href="#cb11-175" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Bubble plot looking at how effect size changes with year from studies conducted in the wild and captivity.</span></span>
-<span id="cb11-176"><a href="#cb11-176" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-177"><a href="#cb11-177" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll add publication year in to the data and calculate the sampling variance</span></span>
-<span id="cb11-178"><a href="#cb11-178" aria-hidden="true" tabindex="-1"></a>    lim[, <span class="st">"year"</span>] <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(lim<span class="sc">$</span>year)</span>
-<span id="cb11-179"><a href="#cb11-179" aria-hidden="true" tabindex="-1"></a>    lim<span class="sc">$</span>vi <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span>(lim<span class="sc">$</span>N <span class="sc">-</span> <span class="dv">3</span>)</span>
-<span id="cb11-180"><a href="#cb11-180" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-181"><a href="#cb11-181" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, lets fit a meta-regerssion model that has an interaction between year and environment type.</span></span>
-<span id="cb11-182"><a href="#cb11-182" aria-hidden="true" tabindex="-1"></a>    model_lim2 <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> yi, <span class="at">V =</span> vi, </span>
-<span id="cb11-183"><a href="#cb11-183" aria-hidden="true" tabindex="-1"></a>                            <span class="at">mods =</span> <span class="sc">~</span>Environment <span class="sc">*</span> year, </span>
-<span id="cb11-184"><a href="#cb11-184" aria-hidden="true" tabindex="-1"></a>                            <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Article, </span>
-<span id="cb11-185"><a href="#cb11-185" aria-hidden="true" tabindex="-1"></a>                                        <span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Datapoint), </span>
-<span id="cb11-186"><a href="#cb11-186" aria-hidden="true" tabindex="-1"></a>                            <span class="at">data =</span> <span class="fu">na.omit</span>(lim))</span>
-<span id="cb11-187"><a href="#cb11-187" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-188"><a href="#cb11-188" aria-hidden="true" tabindex="-1"></a><span class="co"># Just like orchard_plots we just now put the model in</span></span>
-<span id="cb11-189"><a href="#cb11-189" aria-hidden="true" tabindex="-1"></a>    orchaRd<span class="sc">::</span><span class="fu">bubble_plot</span>(model_lim2, <span class="at">mod =</span> <span class="st">"year"</span>, <span class="at">group =</span> <span class="st">"Article"</span>, <span class="at">data =</span> <span class="fu">na.omit</span>(lim), <span class="at">by =</span> <span class="st">"Environment"</span>, <span class="at">xlab =</span> <span class="st">"Year"</span>,<span class="at">legend.pos =</span> <span class="st">"top.left"</span>)</span>
-<span id="cb11-190"><a href="#cb11-190" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-191"><a href="#cb11-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-192"><a href="#cb11-192" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-193"><a href="#cb11-193" aria-hidden="true" tabindex="-1"></a><span class="fu"># Orchard plots with marginalised means {#sec-marginal}</span></span>
-<span id="cb11-194"><a href="#cb11-194" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-195"><a href="#cb11-195" aria-hidden="true" tabindex="-1"></a>One of the main limitations of <span class="in">`orchaRd`</span> (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the <span class="in">`r emmeans`</span> package circumvents that limitation because a full model can be fit and mean effect size predicited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). </span>
-<span id="cb11-196"><a href="#cb11-196" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-197"><a href="#cb11-197" aria-hidden="true" tabindex="-1"></a>To demonstrate how this works, we'll turn to a new meta-analysis by @ODea2019.</span>
-<span id="cb11-198"><a href="#cb11-198" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-201"><a href="#cb11-201" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-202"><a href="#cb11-202" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: odea</span></span>
-<span id="cb11-203"><a href="#cb11-203" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
-<span id="cb11-204"><a href="#cb11-204" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-205"><a href="#cb11-205" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset that comes with orchaRd</span></span>
-<span id="cb11-206"><a href="#cb11-206" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data</span>(fish)</span>
-<span id="cb11-207"><a href="#cb11-207" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-208"><a href="#cb11-208" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll now fit the 'multimoderator' meta-regression model</span></span>
-<span id="cb11-209"><a href="#cb11-209" aria-hidden="true" tabindex="-1"></a>    model_odea <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> lnrr, <span class="at">V =</span> lnrr_vi, </span>
-<span id="cb11-210"><a href="#cb11-210" aria-hidden="true" tabindex="-1"></a>            <span class="at">mods =</span> <span class="sc">~</span>experimental_design <span class="sc">+</span> trait.type <span class="sc">+</span> deg_dif <span class="sc">+</span> treat_end_days, <span class="at">method =</span> <span class="st">"REML"</span>, <span class="at">test =</span> <span class="st">"t"</span>, </span>
-<span id="cb11-211"><a href="#cb11-211" aria-hidden="true" tabindex="-1"></a>            <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> group_ID,</span>
-<span id="cb11-212"><a href="#cb11-212" aria-hidden="true" tabindex="-1"></a>                          <span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> es_ID), </span>
-<span id="cb11-213"><a href="#cb11-213" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> fish, </span>
-<span id="cb11-214"><a href="#cb11-214" aria-hidden="true" tabindex="-1"></a>            <span class="at">control =</span> <span class="fu">list</span>(<span class="at">optimizer =</span> <span class="st">"optim"</span>, <span class="at">optmethod =</span> <span class="st">"Nelder-Mead"</span>))</span>
-<span id="cb11-215"><a href="#cb11-215" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-216"><a href="#cb11-216" aria-hidden="true" tabindex="-1"></a>    model_odea</span>
-<span id="cb11-217"><a href="#cb11-217" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-218"><a href="#cb11-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-219"><a href="#cb11-219" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-220"><a href="#cb11-220" aria-hidden="true" tabindex="-1"></a>You'll notice here that we have fit a number of moderators including the type of trait (<span class="in">`trait.type`</span>) and experimental design (<span class="in">`experimental_design`</span>), and we have controlled for the temperature difference between treatments (<span class="in">`deg_diff`</span>) and how long treatments were applied (<span class="in">`treat_end_days`</span>). Obviously, you'll want to be sure you have enough data to fit such a model, but for demonstration purposes, this will do. </span>
-<span id="cb11-221"><a href="#cb11-221" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-222"><a href="#cb11-222" aria-hidden="true" tabindex="-1"></a>We can now make an <span class="in">`orchard_plot`</span>, but how do we do this given there are so many variables? The key arguments you'll want to know are <span class="in">`at`</span>, and <span class="in">`by`</span> arguments, which allows us to control at what levels we want to marginalise the means to. Here, we want to know teh meta-analytic mean for the different trait categories, but how it changes with larger temperature differences (<span class="in">`deg_days`</span>). It will then predict these means marginalising across all the other moderators in the model. </span>
-<span id="cb11-223"><a href="#cb11-223" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-226"><a href="#cb11-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb11-227"><a href="#cb11-227" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-odea</span></span>
-<span id="cb11-228"><a href="#cb11-228" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot of marginalised meta-analytic mean estimates for four different trait categories (life-history, morphology, physiology and behaviour)</span></span>
-<span id="cb11-229"><a href="#cb11-229" aria-hidden="true" tabindex="-1"></a>orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(model_odea, <span class="at">group =</span> <span class="st">"group_ID"</span>, <span class="at">mod =</span> <span class="st">"trait.type"</span>, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">deg_dif =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="at">by =</span> <span class="st">"deg_dif"</span>, <span class="at">xlab =</span> <span class="st">"lnRR"</span>, <span class="at">data =</span> fish, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">g =</span> <span class="cn">FALSE</span>, <span class="at">legend.pos =</span> <span class="st">"top.left"</span>, <span class="at">condition.lab =</span> <span class="st">"Degree Difference"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.direction =</span> <span class="st">"vertical"</span>)</span>
-<span id="cb11-230"><a href="#cb11-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb11-231"><a href="#cb11-231" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-232"><a href="#cb11-232" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-233"><a href="#cb11-233" aria-hidden="true" tabindex="-1"></a><span class="fu"># Orchard plots from models with heterogeneous variance</span></span>
-<span id="cb11-234"><a href="#cb11-234" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-235"><a href="#cb11-235" aria-hidden="true" tabindex="-1"></a>A key assumption of many meta-analytic models is homogeneity of variance. <span class="in">`metafor`</span> is capcable of releaxing this assumption and it can be extremely improtant for inferential tests. <span class="in">`orchard`</span> can handle models with heterogenous variance across groups. </span>
-<span id="cb11-236"><a href="#cb11-236" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-237"><a href="#cb11-237" aria-hidden="true" tabindex="-1"></a>Let's expand the model we covered in @sec-marginal. </span>
-<span id="cb11-238"><a href="#cb11-238" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-239"><a href="#cb11-239" aria-hidden="true" tabindex="-1"></a><span class="fu"># References</span></span>
+<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "**orchaRd 2.0** Tutorial: ESMARConf2023"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span><span class="co"> Daniel Noble</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> "`r Sys.Date()`"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [./bib/ref.bib]</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="an">biblio-style:</span><span class="co"> ./bib/methods-in-ecology-and-evolution.csl</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"> html:</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="co">    theme: simplex</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co">    code-fold: show</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co">    code-overflow: wrap</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co">    toc: true</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-title: "**Table of Contents**"</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="co">    code-tools: true</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="co">    toc-location: left</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="co">    number-sections: true</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co">    output-file: index.html</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="an">crossref:</span><span class="co"> </span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co">    fig-title: Figure</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a><span class="an">width:</span><span class="co"> 10</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a><span class="an">execute:</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a><span class="co">    warning: false</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a><span class="fu"># How to Download and Install Orchard (vers. 2.0)</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>Orchard 2.0 is not yet on **CRAN**. You can download the package by visiting our <span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/daniel1noble/orchaRd)</span> page. </span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>::: {.callout-note}</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>If you don't already have the <span class="in">`pacman`</span> package **remember to unannotate code line 3**</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: packages</span></span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a><span class="co">#| output: false</span></span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-line-numbers: true</span></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-overflow: scroll</span></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"daniel1noble/orchaRd"</span>)</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("pacman")</span></span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(devtools, tidyverse, metafor, patchwork, </span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>        R.rsp, orchaRd, emmeans, ape, phytools, gt, flextable, downlit)</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">digits =</span> <span class="dv">3</span>, <span class="at">scipen =</span> <span class="dv">2</span>)</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: ref</span></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a>emmeans <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"emmeans::emmeans"</span>, <span class="st">"emmeans"</span>, <span class="fu">autolink</span>(<span class="st">"emmeans::emmeans"</span>))</span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a>tidyverse <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"tidyverse::tidyverse"</span>, <span class="st">"tidyverse"</span>, <span class="fu">autolink</span>(<span class="st">"tidyverse::tidyverse"</span>))</span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a>:::{.column-margin}</span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>Techncially we don't need all these packages to download <span class="in">`orchaRd`</span>, but we'll use them throughout the examples. <span class="in">`orchaRd`</span> does rely heavly on the <span class="in">`r emmeans`</span> and <span class="in">`r tidyverse`</span> packages. You will need to ensure that you have R updated to the required version for <span class="in">`emmeans`</span> to work as it has version requirements.</span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>We also have a <span class="co">[</span><span class="ot">detailed vignette</span><span class="co">](https://daniel1noble.github.io/orchaRd/)</span> which will show much of it's functionality.</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a><span class="fu"># Orchard and Bubble Plots</span></span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a><span class="fu">## Lets load a dataset</span></span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a>We'll use a very simple meta-analysis dataset that is attached to <span class="in">`orchaRd`</span> to demonstrate how you can make orchard plots and bubble plots from meta-regression models. The data come from @Lim2014. This is a meta-analysis comparing correlation coefficients (rather Fisher's *Z* Transformed Correlation), and is useful as it demonstrates a number of orchard plot functions</span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: lim</span></span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-overflow: scroll</span></span>
+<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a><span class="co">#| code-line-numbers: true</span></span>
+<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the lim dataset</span></span>
+<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(lim)</span>
+<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Add in the sampling variance</span></span>
+<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a>lim<span class="sc">$</span>vi <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">/</span><span class="fu">sqrt</span>(lim<span class="sc">$</span>N <span class="sc">-</span> <span class="dv">3</span>))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Lets fit a meta-regression </span></span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a>lim_MR <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> yi, <span class="at">V =</span> vi, </span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a>                    <span class="at">mods =</span> <span class="sc">~</span>Phylum <span class="sc">-</span> <span class="dv">1</span>, </span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a>                    <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Article, </span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>                                 <span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Datapoint), </span>
+<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>                    <span class="at">data =</span> lim)</span>
+<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lim_MR)</span>
+<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>Here, we have fit a multi-level meta-regression model, with two random effects (Article / Study) and a within study variance. You will notice that we have a Phylum moderator as we are intersted in estimating the meta-analytic mean within each major phyla (@fig-orchard1). </span>
+<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a><span class="fu">## Orchard Plots</span></span>
+<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>Using this model and data lets demonstrate how to make orchard plots. This can be done with the <span class="in">`orchard_plot`</span> function.</span>
+<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a>:::{.column-margin} </span>
+<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a>If you're not sure what arguments <span class="in">`orchard_plot`</span> takes you can explore the vigette or ask for help using <span class="in">`?orchard_plot`</span></span>
+<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a>:::{.column-margin} </span>
+<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a><span class="in">`orchard_plot`</span> takes a few essential arguments:</span>
+<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-args</span></span>
+<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Key arguments</span></span>
+<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a>argument <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"model"</span>, <span class="st">"mod"</span>, <span class="st">"data"</span>, <span class="st">"group"</span>, <span class="st">"xlab"</span>)</span>
+<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>descrp <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"The metafor model object (e.g., rma.mv)"</span>, <span class="st">"The moderator of interest (as a character). If you don't specify it will default to the overall meta-analytic mean"</span>, <span class="st">"The dataset used to fit the model"</span>, <span class="st">"The group you wish to tally N for within brackets"</span>, <span class="st">"The axis label for the effect size"</span>)</span>
+<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>tab_arg  <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">`</span><span class="at">Argument</span><span class="st">`</span> <span class="ot">=</span> argument,</span>
+<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a>                    <span class="st">`</span><span class="at">Description</span><span class="st">`</span> <span class="ot">=</span> descrp)</span>
+<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(tab_arg)</span>
+<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-orchard1</span></span>
+<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot of the @Lim2014 meta-regression model. Plotted are meta-anlaytic means, 95% confidence intervals, 95% prediction intervals and the raw effect size data weighted by the the sample size. In this case, *k* is the number of effect sizes and the number of studies are provided within brackets.</span></span>
+<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a>orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(lim_MR, <span class="at">mod =</span> <span class="st">"Phylum"</span>, <span class="at">group =</span> <span class="st">"Article"</span>, <span class="at">data =</span> lim, <span class="at">xlab =</span> <span class="st">"Correlation coefficient"</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">transfm =</span> <span class="st">"tanh"</span>, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">N =</span> <span class="st">"N"</span>, <span class="at">cb =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a><span class="fu">## Subsetting levels in orchard plots</span></span>
+<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a>@fig-orchard1 looks pretty bad. There's very little data in most phyla. So, lets change this by restricting the plotting to only taxa with sufficient data. We can do this using the <span class="in">`at`</span> argument along with <span class="in">`subset = TRUE`</span> to limit the prediction to only three phyla. </span>
+<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a>Here we'll demonstrate a two step approach which can also provide a table of the meta-analytic means which can be used in publications</span>
+<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-lim_sub</span></span>
+<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot that subsets the levels</span></span>
+<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a><span class="co"># Use mod_results to first create a table. It takes the same arguments as orchard_plot()</span></span>
+<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a>    lim_MR_results <span class="ot">&lt;-</span> orchaRd<span class="sc">::</span><span class="fu">mod_results</span>(lim_MR, <span class="at">mod =</span> <span class="st">"Phylum"</span>, <span class="at">group =</span> <span class="st">"Article"</span>,</span>
+<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> lim, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">Phylum =</span> <span class="fu">c</span>(<span class="st">"Chordata"</span>, <span class="st">"Arthropoda"</span>, <span class="st">"Mollusca"</span>)), <span class="at">subset =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, we can feed in the mod_results() table directly to orchaRd</span></span>
+<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a>    orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(lim_MR_results, <span class="at">data =</span> lim, <span class="at">xlab =</span> <span class="st">"Correlation coefficient"</span>,</span>
+<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a>    <span class="at">transfm =</span> <span class="st">"tanh"</span>, <span class="at">g =</span> <span class="cn">TRUE</span>, <span class="at">angle =</span> <span class="dv">45</span>)</span>
+<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a>Ok, this is more useful, but lets also make a nice table with the <span class="in">`mod_results`</span> to report in our meta-analysis, which we can see in @tbl-lim.</span>
+<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-lim</span></span>
+<span id="cb13-161"><a href="#cb13-161" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Meta-analytic mean, 95% CIs, 95% PI's for the three phyla. To do this we need to extract the *mod_table* from the `orchaRd` object.</span></span>
+<span id="cb13-162"><a href="#cb13-162" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(lim_MR_results<span class="sc">$</span>mod_table)</span>
+<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a><span class="fu">## Bubble plots</span></span>
+<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a>We often have moderators that are continuous in meta-analyis, particularly when considering things like publication bias. Here, <span class="in">`bubble_plots`</span> can be extremely useful (@fig-bubble). </span>
+<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-bubble</span></span>
+<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Bubble plot looking at how effect size changes with year from studies conducted in the wild and captivity.</span></span>
+<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll add publication year in to the data and calculate the sampling variance</span></span>
+<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a>    lim[, <span class="st">"year"</span>] <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(lim<span class="sc">$</span>year)</span>
+<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a>    lim<span class="sc">$</span>vi <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span>(lim<span class="sc">$</span>N <span class="sc">-</span> <span class="dv">3</span>)</span>
+<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, lets fit a meta-regerssion model that has an interaction between year and environment type.</span></span>
+<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a>    model_lim2 <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> yi, <span class="at">V =</span> vi, </span>
+<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a>                            <span class="at">mods =</span> <span class="sc">~</span>Environment <span class="sc">*</span> year, </span>
+<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a>                            <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Article, </span>
+<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a>                                        <span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> Datapoint), </span>
+<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a>                            <span class="at">data =</span> <span class="fu">na.omit</span>(lim))</span>
+<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a><span class="co"># Just like orchard_plots we just now put the model in</span></span>
+<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a>    orchaRd<span class="sc">::</span><span class="fu">bubble_plot</span>(model_lim2, <span class="at">mod =</span> <span class="st">"year"</span>, <span class="at">group =</span> <span class="st">"Article"</span>, <span class="at">data =</span> <span class="fu">na.omit</span>(lim), <span class="at">by =</span> <span class="st">"Environment"</span>, <span class="at">xlab =</span> <span class="st">"Year"</span>,<span class="at">legend.pos =</span> <span class="st">"top.left"</span>)</span>
+<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a><span class="fu"># Orchard plots with marginalised means {#sec-marginal}</span></span>
+<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a>One of the main limitations of <span class="in">`orchaRd`</span> (vers. 1.0) was that it was only capable of handling meta-regerssion models with a single moderator. The use of the <span class="in">`r emmeans`</span> package circumvents that limitation because a full model can be fit and mean effect size predicited in levels of a single moderator marginalising (effectvely averaging) over levels of a second (or even third). </span>
+<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a>To demonstrate how this works, we'll turn to a new meta-analysis by @ODea2019.</span>
+<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: odea</span></span>
+<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: true</span></span>
+<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset that comes with orchaRd</span></span>
+<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data</span>(fish)</span>
+<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a><span class="co"># We'll now fit the 'multimoderator' meta-regression model</span></span>
+<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a>    model_odea <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> lnrr, <span class="at">V =</span> lnrr_vi, </span>
+<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a>            <span class="at">mods =</span> <span class="sc">~</span>experimental_design <span class="sc">+</span> trait.type <span class="sc">+</span> deg_dif <span class="sc">+</span> treat_end_days, <span class="at">method =</span> <span class="st">"REML"</span>, <span class="at">test =</span> <span class="st">"t"</span>, </span>
+<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a>            <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> group_ID,</span>
+<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a>                          <span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> es_ID), </span>
+<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> fish, </span>
+<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a>            <span class="at">control =</span> <span class="fu">list</span>(<span class="at">optimizer =</span> <span class="st">"optim"</span>, <span class="at">optmethod =</span> <span class="st">"Nelder-Mead"</span>))</span>
+<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a>    model_odea</span>
+<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a>You'll notice here that we have fit a number of moderators including the type of trait (<span class="in">`trait.type`</span>) and experimental design (<span class="in">`experimental_design`</span>), and we have controlled for the temperature difference between treatments (<span class="in">`deg_diff`</span>) and how long treatments were applied (<span class="in">`treat_end_days`</span>). Obviously, you'll want to be sure you have enough data to fit such a model, but for demonstration purposes, this will do. </span>
+<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a>We can now make an <span class="in">`orchard_plot`</span>, but how do we do this given there are so many variables? The key arguments you'll want to know are <span class="in">`at`</span>, and <span class="in">`by`</span> arguments, which allows us to control at what levels we want to marginalise the means to. Here, we want to know teh meta-analytic mean for the different trait categories, but how it changes with larger temperature differences (<span class="in">`deg_days`</span>). It will then predict these means marginalising across all the other moderators in the model. </span>
+<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-odea</span></span>
+<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot of marginalised meta-analytic mean estimates for four different trait categories (life-history, morphology, physiology and behaviour)</span></span>
+<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a>orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(model_odea, <span class="at">group =</span> <span class="st">"group_ID"</span>, <span class="at">mod =</span> <span class="st">"trait.type"</span>, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">deg_dif =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="at">by =</span> <span class="st">"deg_dif"</span>, <span class="at">xlab =</span> <span class="st">"lnRR"</span>, <span class="at">data =</span> fish, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">g =</span> <span class="cn">FALSE</span>, <span class="at">legend.pos =</span> <span class="st">"top.left"</span>, <span class="at">condition.lab =</span> <span class="st">"Degree Difference"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.direction =</span> <span class="st">"vertical"</span>)</span>
+<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a><span class="fu"># Orchard plots from models with heterogeneous variance</span></span>
+<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a>A key assumption of many meta-analytic models is homogeneity of variance. <span class="in">`metafor`</span> is capcable of releaxing this assumption and it can be extremely improtant for inferential tests. <span class="in">`orchard`</span> can handle models with heterogenous variance across groups. </span>
+<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a>Let's expand the model we covered in @sec-marginal to now relax the assumption of heterogeneous variance in our trait categories.</span>
+<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-odea_het</span></span>
+<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: Orchard plot of @ODea2019 data that includes modelling heterogeneous variance across trait categories. </span></span>
+<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a>model_het <span class="ot">&lt;-</span> metafor<span class="sc">::</span><span class="fu">rma.mv</span>(<span class="at">yi =</span> lnrr, <span class="at">V =</span> lnrr_vi, </span>
+<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a>    <span class="at">mods =</span> <span class="sc">~</span>experimental_design <span class="sc">+</span> trait.type <span class="sc">+</span> deg_dif <span class="sc">+</span> treat_end_days, <span class="at">method =</span> <span class="st">"REML"</span>, <span class="at">test =</span> <span class="st">"t"</span>, </span>
+<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a>    <span class="at">random =</span> <span class="fu">list</span>(<span class="sc">~</span><span class="dv">1</span> <span class="sc">|</span> group_ID,</span>
+<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a>                  <span class="sc">~</span><span class="dv">1</span> <span class="sc">+</span> trait.type <span class="sc">|</span> es_ID), </span>
+<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a>    <span class="at">rho =</span> <span class="dv">0</span>, <span class="at">struc =</span> <span class="st">"HCS"</span>, <span class="at">data =</span> fish, <span class="at">control =</span> <span class="fu">list</span>(<span class="at">optimizer =</span> <span class="st">"optim"</span>, <span class="at">optmethod =</span> <span class="st">"Nelder-Mead"</span>))</span>
+<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a>orchaRd<span class="sc">::</span><span class="fu">orchard_plot</span>(model_het, <span class="at">group =</span> <span class="st">"group_ID"</span>, <span class="at">mod =</span> <span class="st">"trait.type"</span>, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">deg_dif =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="at">by =</span> <span class="st">"deg_dif"</span>, <span class="at">xlab =</span> <span class="st">"lnRR"</span>, <span class="at">data =</span> fish, <span class="at">angle =</span> <span class="dv">45</span>, <span class="at">g =</span> <span class="cn">FALSE</span>, <span class="at">legend.pos =</span> <span class="st">"top.left"</span>, <span class="at">condition.lab =</span> <span class="st">"Degree Difference"</span>) <span class="sc">+</span> <span class="fu">theme</span>(<span class="at">legend.direction =</span> <span class="st">"vertical"</span>)</span>
+<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a>:::{.column-margin}</span>
+<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: tbl-odea-het</span></span>
+<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: Table output for Figure 5.</span></span>
+<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a>tbl_odea <span class="ot">&lt;-</span> orchaRd<span class="sc">::</span><span class="fu">mod_results</span>(model_het, <span class="at">group =</span> <span class="st">"group_ID"</span>, <span class="at">mod =</span> <span class="st">"trait.type"</span>, <span class="at">at =</span> <span class="fu">list</span>(<span class="at">deg_dif =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>)), <span class="at">by =</span> <span class="st">"deg_dif"</span>, <span class="at">weights =</span> <span class="st">"prop"</span>, <span class="at">data =</span> fish)</span>
+<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a><span class="fu">gt</span>(tbl_odea<span class="sc">$</span>mod_table)</span>
+<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a>We can now see that the residual variability in each of the 4 trait categories is no longer assumed to be the same. </span>
+<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a><span class="fu"># Additional Functions</span></span>
+<span id="cb13-271"><a href="#cb13-271" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-272"><a href="#cb13-272" aria-hidden="true" tabindex="-1"></a><span class="in">`orchaRd`</span> 2.0 also has additional functions that are quite useful in meta-analysis, which are detailed in @tbl-final.</span>
+<span id="cb13-273"><a href="#cb13-273" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-274"><a href="#cb13-274" aria-hidden="true" tabindex="-1"></a>| **Function**  | **Description**  |</span>
+<span id="cb13-275"><a href="#cb13-275" aria-hidden="true" tabindex="-1"></a>|--|--------|</span>
+<span id="cb13-276"><a href="#cb13-276" aria-hidden="true" tabindex="-1"></a>| <span class="in">`i2_ml()`</span>  | Calculates various $I^2$ metrics (depending on how many random effects are in the model) for multi-level meta-analysis, including $I^2_{total}$, which is the proportion of total variance in effects excluding sampling variance |</span>
+<span id="cb13-277"><a href="#cb13-277" aria-hidden="true" tabindex="-1"></a>| <span class="in">`r2_ml()`</span>   | Calculate $R^2$ for the model. Both marginal and conditional $R^2$ are provided. See @Nakagawa2013. |</span>
+<span id="cb13-278"><a href="#cb13-278" aria-hidden="true" tabindex="-1"></a>| <span class="in">`submerge()`</span> |Merges two <span class="in">`mod_results`</span> tables together. Useful for creating orchard plots where the overall meta-analytic mean is presented below meta-regression models. |</span>
+<span id="cb13-279"><a href="#cb13-279" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-280"><a href="#cb13-280" aria-hidden="true" tabindex="-1"></a>: Useful functions in orchaRd 2.0 and a decsription of what they do.</span>
+<span id="cb13-281"><a href="#cb13-281" aria-hidden="true" tabindex="-1"></a>{#tbl-final}</span>
+<span id="cb13-282"><a href="#cb13-282" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-283"><a href="#cb13-283" aria-hidden="true" tabindex="-1"></a><span class="fu"># References</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

@@ -24,7 +24,7 @@ execute:
 
 # How to Download and Install Orchard (vers. 2.0)
 
-Details on the original `orchaRd` (vers. 1.0) can be found in @Nakagawa2021-ls. Orchard 2.0 functionality is decsribed in @Nakagawa2.0, but is not yet on **CRAN**. You can download the package by visiting our [GitHub](https://github.com/daniel1noble/orchaRd) page. 
+Details on the original `orchaRd` (vers. 1.0) can be found in @Nakagawa2021-ls. Orchard 2.0 functionality is described in @Nakagawa2.0, but is not yet on **CRAN**. You can download the package by visiting our [GitHub](https://github.com/daniel1noble/orchaRd) page. 
 
 ::: {.callout-note}
 If you don't already have the `pacman` package **remember to unannotate code line 3**
